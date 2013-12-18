@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo docker run -i -p 8080:80 apache2
+ 
