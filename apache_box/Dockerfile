@@ -10,7 +10,11 @@ RUN apt-get update
 RUN apt-get install -y apache2
 RUN apt-get install -y php5
 RUN apt-get install -y libapache2-mod-php5
+RUN apt-get install -y php5-curl
 RUN apt-get install -y php5-mysql
+RUN a2enmod rewrite
+
+ADD default /etc/apache2/sites-available/default
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
