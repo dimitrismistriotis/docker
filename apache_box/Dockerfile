@@ -28,5 +28,9 @@ ENV APACHE_LOG_DIR /var/log/apache2
 
 EXPOSE 80
 
-ENTRYPOINT ["/usr/sbin/apache2"]
-CMD ["-D", "FOREGROUND"]
+
+# Use this entry point to start apache, when everything is configured:
+ENTRYPOINT ["apachectl -e info -DFOREGROUND"]
+
+# Use this entry point for finishing up configuration:
+# ENTRYPOINT ["/bin/bash"]
