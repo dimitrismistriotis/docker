@@ -20,6 +20,7 @@ RUN apt-get install -y php5-mysql
 RUN a2enmod rewrite
 
 ADD default /etc/apache2/sites-available/000-default.conf
+ADD php.ini /etc/php5/apache2/php.ini
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
