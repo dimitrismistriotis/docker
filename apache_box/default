@@ -16,6 +16,7 @@
 	        Order allow,deny
 	        allow from all
 	</Directory>
+	AddType application/x-httpd-php .php
 
 
 	# Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
