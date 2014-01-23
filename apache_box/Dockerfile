@@ -1,5 +1,5 @@
 #
-# Started from: 
+# Started from:
 # https://index.docker.io/u/angelrr7702/ubuntu-13.10/
 # and added php5 etc.
 #
@@ -33,4 +33,4 @@ EXPOSE 80
 ENTRYPOINT ["apachectl -e info -DFOREGROUND"]
 
 # Use this entry point for finishing up configuration:
-# ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash"]
