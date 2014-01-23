@@ -30,7 +30,7 @@ EXPOSE 80
 
 
 # Use this entry point to start apache, when everything is configured:
-ENTRYPOINT ["apachectl -e info -DFOREGROUND"]
+# ENTRYPOINT ["/usr/sbin/apachectl -e info -DFOREGROUND"]
 
 # Use this entry point for finishing up configuration:
 ENTRYPOINT ["/bin/bash"]
