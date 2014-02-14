@@ -18,6 +18,8 @@ RUN apt-get install -y php5-curl
 RUN apt-get install -y php5-json
 RUN apt-get install -y php5-mysql
 RUN a2enmod rewrite
+RUN apt-get update
+RUN apt-get -y upgrade
 
 ADD default /etc/apache2/sites-available/000-default.conf
 ADD php.ini /etc/php5/apache2/php.ini
